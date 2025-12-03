@@ -7,7 +7,7 @@ public class Prodotto {
     public String description="";
     public float price;
     public float iva=0.22f;
-
+ 
     //Constructor(s)
     public Prodotto(String name, float price) {
         this.codex = Math.random() * 10;
