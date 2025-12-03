@@ -1,16 +1,19 @@
 package org.lessons.java.shop;
 
+import java.util.Random;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class Prodotto {
-    public double codex;
+    public int codex;
     public String name;
     public String description="";
-    public float price;
-    public float iva=0.22f;
+    public BigDecimal price;
+    public float iva = 0.22f;
  
     //Constructor(s)
-    public Prodotto(String name, float price) {
-        this.codex = Math.random() * 10;
+    public Prodotto(String name, BigDecimal price) {
+        this.codex = (new Random()).nextInt(99999);
 
         this.name = name;
         this.price = price;
@@ -25,17 +28,17 @@ public class Prodotto {
     }
 
     //Methods
-    public float getPrice() {
-        return this.price;
+    public BigDecimal getPrice() {
+        return this.price.setScale(2, RoundingMode.DOWN);
     }
     
-    public float getTaxedPrice() {
-        return (this.price * this.iva) + this.price;
+    public BigDecimal getTaxedPrice() {
+        return this.price.add((this.price.multiply(new BigDecimal(this.iva)))).setScale(2, RoundingMode.DOWN);
     }
 
     public String getFullID() {
         String codex_string = String.valueOf(this.codex);
-        return this.name.trim() + codex_string;
+        return this.name.trim().toUpperCase() + '-' + codex_string;
     }
 
 
