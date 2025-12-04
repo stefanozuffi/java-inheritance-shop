@@ -7,11 +7,17 @@ import java.math.RoundingMode;
 public class Prodotto {
     private int codex;
     private String name;
-    private String description="";
+    protected String description="";
     private BigDecimal price;
-    private float iva = 0.22f;
+    protected float iva = 0.22f;
  
     //Constructor(s)
+    public Prodotto() {
+        this.codex = (new Random()).nextInt(99999);
+        this.name = "";
+        this.price = new BigDecimal(0);
+    }
+
     public Prodotto(String name, BigDecimal price) {
         this.codex = (new Random()).nextInt(99999);
 
