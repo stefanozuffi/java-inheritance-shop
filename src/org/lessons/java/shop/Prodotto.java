@@ -70,7 +70,7 @@ public class Prodotto {
     public void setDescription(String text) {
         this.description = text;
     }
-    public void setIVA(float iva) {
+    protected void setIVA(float iva) {
         if (0 < iva && iva < 1) {
             this.iva = iva;
         }
