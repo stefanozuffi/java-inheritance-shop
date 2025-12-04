@@ -16,7 +16,6 @@ public class Main {
         System.out.println(item1.getTaxedPrice());
         System.out.println(item2.getFullID());
 
-        System.out.println(item1.description);
 
 
     }
