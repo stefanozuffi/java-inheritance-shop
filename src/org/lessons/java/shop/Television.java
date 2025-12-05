@@ -17,10 +17,19 @@ public class Television extends Prodotto{
         this("", new BigDecimal(0), new int[2], false);
     }
 
+    public Television(String name, int[] dimensions) {
+        this(name, new BigDecimal(0), dimensions, false);
+    }
+
     public int[] getDims() {
         return this.dimensionWH;
     }
     public boolean getIsSmart() {
         return this.isSmart;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s" + "-" + "%d" + "x" + "%d", super.toString(), this.dimensionWH[0], this.dimensionWH[1]);
     }
 }

@@ -76,4 +76,10 @@ public class Prodotto {
         }
     }
 
+    @Override
+    public String toString() {
+        String codex_string = String.valueOf(this.codex);
+        return this.name.trim().toUpperCase() + '-' + codex_string;
+    }
+
 };

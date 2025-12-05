@@ -16,7 +16,10 @@ public class Main {
         System.out.println(item1.getTaxedPrice());
         System.out.println(item2.getFullID());
 
-
+        SmartPhone iphone = new SmartPhone("iphone12", 64);
+        System.out.println(iphone.toString());
+        Television tv = new Television("SonyPro", new int[] {35,55});
+        System.out.println(tv.toString());
 
     }
 }

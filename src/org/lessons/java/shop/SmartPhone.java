@@ -20,6 +20,10 @@ public class SmartPhone extends Prodotto{
         this("", new BigDecimal(0) , 16);
     }
 
+    public SmartPhone(String name, int memoryGB) {
+        this(name, new BigDecimal(0) , memoryGB);
+    }
+
     public SmartPhone(int memoryGB) {
         this("", new BigDecimal(0), memoryGB);
     }
@@ -28,6 +32,12 @@ public class SmartPhone extends Prodotto{
     private long generateIMEI() {
         return (new Random()).nextLong(100000000000000L, 999999999999999L);
     }
+
+    @Override
+    public String toString() {
+        return String.format("%s" + "-" + "%s" + "GB", super.toString(), this.memoryGB);
+    }
+
 
     
 }

@@ -16,11 +16,20 @@ public class Headphone extends Prodotto{
         this("", new BigDecimal(0), "black", false);
     }
 
+    public Headphone(String color) {
+        this("", new BigDecimal(0), color, false);
+    }
+
     public String getColor() {
         return this.color;
     }
 
     public boolean getWireless() {
         return this.wireless;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s" + "-" + "%s", super.toString(), this.color);
     }
 }
