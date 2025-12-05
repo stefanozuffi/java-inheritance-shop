@@ -15,6 +15,9 @@ public class Headphone extends Prodotto{
     public Headphone() {
         this("", new BigDecimal(0), "black", false);
     }
+    public Headphone(String name, String color) {
+        this(name, new BigDecimal(0), color, false);
+    }
 
     public Headphone(String color) {
         this("", new BigDecimal(0), color, false);

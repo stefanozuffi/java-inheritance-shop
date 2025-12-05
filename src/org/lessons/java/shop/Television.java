@@ -16,6 +16,9 @@ public class Television extends Prodotto{
     public Television() {
         this("", new BigDecimal(0), new int[2], false);
     }
+    public Television(String name) {
+        this(name, new BigDecimal(0), new int[2], false);
+    }
 
     public Television(String name, int[] dimensions) {
         this(name, new BigDecimal(0), dimensions, false);
